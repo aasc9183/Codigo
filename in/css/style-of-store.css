@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+    font-size: 20px;
+    color: #c3d9a1 ;
+}
+
+body{
+    background-color: #123229;   
+}
+
+.encabezado{
+    background-color: #156464;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px 5%;
+}
+
+.encabezado .logo{
+    cursor: pointer;
+}
+
+.encabezado .logo img{
+    height: 40px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.encabezado .logo img::hover{
+    transform: scale(1.2);
+}
+
+.encabezado .links-navbar{
+    list-style: none;
+}
+
+.encabezado .links-navbar li{
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.encabezado .links-navbar li::hover{
+    transform: scale(1.1);
+}
+
+.encabezado .links-navbar a{
+    font-size: 700;
+    color: white;
+    
+}
+
+.encabezado .links-navbar li a::hover{
+    color: yellow;
+}
+
+.encabezado .btn button{
+    margin-left: 10px;
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background: #156464;
+    border: none;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.encabezado .btn button::hover{
+    background-color: white;
+    color: yellow;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:800px ){
+    .links-navbar, .btn{
+        display: none;
+    }
+    .menu{
+        display: inherit;
+    }
+}
+
+/* la parte de la nav*/
+
+.encabezado a{
+    text-decoration: none;
+}
+
+.encabezado .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33,49,63);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.encabezado .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: center;
+    justify-content: center;
+}
+
+.encabezado .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+.encabezado .overlay a::hover,
+.encabezado .overlay a::focus{
+    color: yellow;
+}
+
+.encabezado .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+
+@media screen and (max-height: 450px){
+    .encabezado .overlay a{
+        font-size: 20px;
+    }
+
+    .encabezado .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
